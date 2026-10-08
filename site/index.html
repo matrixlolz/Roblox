@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Riftworks Studio</title>
+  <meta name="description" content="Riftworks is an independent Roblox studio building worlds played by millions." />
+  <meta name="theme-color" content="#07060d" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Unbounded:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300e5ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='url(%23g)' stroke-width='8'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-ring"></div>
+    <div class="loader-text">OPENING RIFT <span id="loaderPct">0</span>%</div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="brand" aria-label="Riftworks home">
+      <span class="brand-mark"></span>
+      <span>RIFTWORKS</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#games">Games</a>
+      <a href="#stats">Impact</a>
+      <a href="#studio">Studio</a>
+      <a href="#careers">Careers</a>
+      <a href="#contact" class="btn btn-small">Partner with us</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <canvas id="portal" aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <p class="eyebrow reveal"><span class="live-dot"></span> <span id="liveNow">48,210</span> players in our worlds right now</p>
+        <h1 class="hero-title">
+          <span class="line"><span class="word" data-scramble>WE BUILD</span></span>
+          <span class="line"><span class="word grad" data-scramble>WORLDS</span></span>
+          <span class="line"><span class="word" data-scramble>PEOPLE LIVE IN.</span></span>
+        </h1>
+        <p class="hero-sub reveal">Riftworks is an independent Roblox studio. We make games, grow communities, and help brands step through to a billion-player platform.</p>
+        <div class="hero-cta reveal">
+          <a href="#games" class="btn btn-primary magnetic">Explore our games <span aria-hidden="true">→</span></a>
+          <a href="#contact" class="btn btn-ghost magnetic">Work with us</a>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>GAME DESIGN</span><i>✦</i><span>LIVE OPS</span><i>✦</i><span>LUAU ENGINEERING</span><i>✦</i><span>3D ART</span><i>✦</i><span>BRAND EXPERIENCES</span><i>✦</i><span>COMMUNITY</span><i>✦</i><span>UGC</span><i>✦</i><span>ANALYTICS</span><i>✦</i>
+        <span>GAME DESIGN</span><i>✦</i><span>LIVE OPS</span><i>✦</i><span>LUAU ENGINEERING</span><i>✦</i><span>3D ART</span><i>✦</i><span>BRAND EXPERIENCES</span><i>✦</i><span>COMMUNITY</span><i>✦</i><span>UGC</span><i>✦</i><span>ANALYTICS</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- GAMES -->
+    <section class="section" id="games">
+      <div class="section-head">
+        <p class="kicker reveal">01 — Our games</p>
+        <h2 class="reveal">Worlds on the other side.</h2>
+        <div class="filters reveal" role="tablist" aria-label="Filter games">
+          <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="chip" data-filter="adventure" role="tab" aria-selected="false">Adventure</button>
+          <button class="chip" data-filter="simulator" role="tab" aria-selected="false">Simulator</button>
+          <button class="chip" data-filter="pvp" role="tab" aria-selected="false">PvP</button>
+          <button class="chip" data-filter="social" role="tab" aria-selected="false">Social</button>
+        </div>
+      </div>
+      <div class="games" id="gamesGrid"></div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section stats-section" id="stats">
+      <div class="section-head">
+        <p class="kicker reveal">02 — Impact</p>
+        <h2 class="reveal">The numbers keep climbing.</h2>
+      </div>
+      <div class="stats">
+        <div class="stat reveal"><div class="stat-num" data-count="1.8" data-suffix="B+" data-decimals="1">0</div><p>Total visits</p></div>
+        <div class="stat reveal"><div class="stat-num" data-count="210" data-suffix="K">0</div><p>Peak concurrent players</p></div>
+        <div class="stat reveal"><div class="stat-num" data-count="14" data-suffix="M">0</div><p>Favorites</p></div>
+        <div class="stat reveal"><div class="stat-num" data-count="93" data-suffix="%">0</div><p>Average like ratio</p></div>
+      </div>
+      <div class="chart-card reveal">
+        <div class="chart-head">
+          <div>
+            <p class="chart-label">Concurrent players · last 24h</p>
+            <p class="chart-value"><span id="chartNow">48,210</span> <span class="up">▲ 12.4%</span></p>
+          </div>
+          <span class="pill"><span class="live-dot"></span> LIVE</span>
+        </div>
+        <svg id="chart" viewBox="0 0 800 200" preserveAspectRatio="none" role="img" aria-label="Line chart of concurrent players over the last 24 hours, trending upward">
+          <defs>
+            <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="var(--violet)" stop-opacity=".45" />
+              <stop offset="1" stop-color="var(--violet)" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <path id="chartArea" fill="url(#chartFill)" />
+          <path id="chartLine" fill="none" stroke="var(--cyan)" stroke-width="2.5" vector-effect="non-scaling-stroke" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- SERVICES / STUDIO -->
+    <section class="section" id="studio">
+      <div class="section-head">
+        <p class="kicker reveal">03 — The studio</p>
+        <h2 class="reveal">Everything from first sketch to ten-year live ops.</h2>
+      </div>
+      <div class="services">
+        <article class="service reveal tilt">
+          <div class="service-icon">◎</div>
+          <h3>Original IP</h3>
+          <p>We prototype fast, playtest weekly, and only ship what kids actually come back to. Every one of our hits started as a 48-hour game jam.</p>
+        </article>
+        <article class="service reveal tilt">
+          <div class="service-icon">⬡</div>
+          <h3>Brand worlds</h3>
+          <p>Immersive experiences for brands that feel like games, not ads. Built to Roblox's advertising standards and measured on real engagement.</p>
+        </article>
+        <article class="service reveal tilt">
+          <div class="service-icon">⟁</div>
+          <h3>Live ops</h3>
+          <p>Weekly updates, seasonal events, and economy tuning driven by live analytics. We keep worlds alive long after launch day.</p>
+        </article>
+        <article class="service reveal tilt">
+          <div class="service-icon">✧</div>
+          <h3>Acquisitions</h3>
+          <p>Made something great? We partner with and acquire games from indie developers, then scale them with our team and tooling.</p>
+        </article>
+      </div>
+
+      <div class="timeline">
+        <h3 class="reveal timeline-title">How we got here</h3>
+        <ol>
+          <li class="reveal"><span class="year">2020</span><p>Three friends, one Discord server, and a broken obby that somehow hit the front page.</p></li>
+          <li class="reveal"><span class="year">2021</span><p>First game crosses 100M visits. We rent an actual office.</p></li>
+          <li class="reveal"><span class="year">2023</span><p>Launch our first brand world. Team grows to 40 across 12 countries.</p></li>
+          <li class="reveal"><span class="year">2025</span><p>Pass 1 billion visits. Start acquiring and scaling indie games.</p></li>
+          <li class="reveal"><span class="year now">Now</span><p>Building the next thing. Want to help?</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="section quote-section">
+      <blockquote class="big-quote reveal">
+        “The best games on Roblox aren't made for players. They're made <em>with</em> them.”
+      </blockquote>
+      <p class="quote-by reveal">— Riftworks founding principle</p>
+    </section>
+
+    <!-- CAREERS -->
+    <section class="section" id="careers">
+      <div class="section-head">
+        <p class="kicker reveal">04 — Careers</p>
+        <h2 class="reveal">Remote-first. Player-obsessed.</h2>
+      </div>
+      <ul class="jobs">
+        <li class="job reveal"><a href="#contact"><span class="job-title">Senior Luau Engineer</span><span class="job-meta">Engineering · Remote</span><span class="job-arrow">→</span></a></li>
+        <li class="job reveal"><a href="#contact"><span class="job-title">Game Designer, Live Ops</span><span class="job-meta">Design · Remote</span><span class="job-arrow">→</span></a></li>
+        <li class="job reveal"><a href="#contact"><span class="job-title">3D Environment Artist</span><span class="job-meta">Art · Remote</span><span class="job-arrow">→</span></a></li>
+        <li class="job reveal"><a href="#contact"><span class="job-title">Community Manager</span><span class="job-meta">Community · Remote</span><span class="job-arrow">→</span></a></li>
+      </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="section-head">
+        <p class="kicker reveal">05 — FAQ</p>
+        <h2 class="reveal">Questions, answered.</h2>
+      </div>
+      <div class="faq">
+        <details class="reveal"><summary>Do you acquire Roblox games?</summary><p>Yes. If your game has strong retention but you lack the team to scale it, reach out. We offer upfront payments, revenue share, or both.</p></details>
+        <details class="reveal"><summary>How much does a brand world cost?</summary><p>It depends on scope. Most projects take 8–16 weeks. Tell us your goals and we'll send a proposal within a few days.</p></details>
+        <details class="reveal"><summary>Can I pitch you a game idea?</summary><p>Ideas are cheap; prototypes aren't. Send us something playable, even if it's rough, and we'll take a look.</p></details>
+        <details class="reveal"><summary>Where is the team based?</summary><p>Everywhere. We're remote-first with people across Europe, the Americas, and Asia, and we meet up twice a year.</p></details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <p class="kicker reveal">06 — Contact</p>
+      <h2 class="contact-title reveal">Step through<br /><span class="grad">the rift.</span></h2>
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="field">
+          <input id="name" name="name" required placeholder=" " autocomplete="name" />
+          <label for="name">Your name</label>
+        </div>
+        <div class="field">
+          <input id="email" name="email" type="email" required placeholder=" " autocomplete="email" />
+          <label for="email">Email</label>
+        </div>
+        <div class="field full">
+          <select id="topic" name="topic">
+            <option>Brand partnership</option>
+            <option>Sell or partner on a game</option>
+            <option>Careers</option>
+            <option>Something else</option>
+          </select>
+          <label for="topic" class="static">Topic</label>
+        </div>
+        <div class="field full">
+          <textarea id="msg" name="msg" rows="4" required placeholder=" "></textarea>
+          <label for="msg">Tell us what you're thinking</label>
+        </div>
+        <button class="btn btn-primary magnetic full" type="submit">Send message <span aria-hidden="true">→</span></button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-big" aria-hidden="true">RIFTWORKS</div>
+    <div class="footer-row">
+      <span>© <span id="year"></span> Riftworks Studio</span>
+      <div class="socials">
+        <a href="#" aria-label="Roblox group">Roblox</a>
+        <a href="#" aria-label="X / Twitter">X</a>
+        <a href="#" aria-label="Discord">Discord</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+      <span>Not affiliated with Roblox Corporation.</span>
+    </div>
+  </footer>
+
+  <!-- Game modal -->
+  <dialog class="modal" id="gameModal">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <div class="modal-art" id="modalArt"></div>
+    <div class="modal-body">
+      <p class="kicker" id="modalGenre"></p>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <div class="modal-stats" id="modalStats"></div>
+      <a href="#" class="btn btn-primary" id="modalPlay">▶ Play on Roblox</a>
+    </div>
+  </dialog>
+
+  <script src="main.js"></script>
+</body>
+</html>
